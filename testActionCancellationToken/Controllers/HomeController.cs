@@ -20,6 +20,12 @@ namespace testActionCancellationToken.Controllers
             return "ok";
         }
 
+        /// <summary>
+        /// Using CancellationTokens in ASP.NET Core MVC controllers
+        /// https://andrewlock.net/using-cancellationtokens-in-asp-net-core-mvc-controllers/
+        /// </summary>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
         [HttpGet("/slow")]
         public async Task<string> Get(CancellationToken cancellationToken)
         {
